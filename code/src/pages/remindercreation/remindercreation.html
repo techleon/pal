@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Create a Reminder</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content class="content">
+  <button ion-button icon-left  color="dark" clear class="done"><ion-icon name="checkmark"></ion-icon>Done</button>
+  <h6 class="prior">Set Time prior to hangout time:</h6>
+  
+   
+        <ion-item class="inputs">    
+          <ion-label>Hours</ion-label>
+          <ion-datetime displayFormat="hh" [(ngModel)]="hour" style="padding-left:0;"></ion-datetime>
+        </ion-item>  
+     
+        <ion-item class="inputs">      
+          <ion-label>Minutes</ion-label>
+          <ion-datetime displayFormat="mm" [(ngModel)]="minute"></ion-datetime>
+        </ion-item>
+     
+  <ion-item class="reminders">
+    <ion-label class="label">No of Reminders</ion-label>
+    <ion-select>
+        <ion-option value="1">1</ion-option>
+        <ion-option value="2">2</ion-option>
+        <ion-option value="3">3</ion-option>
+        <ion-option value="4">4</ion-option>
+        <ion-option value="5">5</ion-option>
+        <ion-option value="6">6</ion-option>
+        <ion-option value="7">7</ion-option>
+        <ion-option value="8">8</ion-option>
+        <ion-option value="9">9</ion-option>
+        <ion-option value="10">10</ion-option>
+    </ion-select>
+  </ion-item>
+  <div class="note">
+    <ion-item class="text">
+      <ion-label>Note!</ion-label>
+      <ion-textarea style="margin-right:5pt;color:white;" rows="10"></ion-textarea>
+    </ion-item>
+  </div>  
+  <ion-fab bottom right>
+    <button ion-fab mini (click)="nav()"><ion-icon name="brush"></ion-icon></button>
+  </ion-fab>
+</ion-content>

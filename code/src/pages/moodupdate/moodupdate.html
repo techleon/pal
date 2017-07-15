@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Update your Mood</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-card class="mood-update">
+    <ion-card-header color="danger">
+      Mood Updater:
+      <button ion-button color='danger' style='float:right;' (click)='updateMood()' type='button'>Update</button>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-textarea [(ngModel)]="emojitext"  placeholder="How's it going ?" class="moodinput"></ion-textarea>
+    </ion-card-content>
+    <ion-card-header color="danger">
+      Current Mood:
+    </ion-card-header>
+    <ion-card-content>
+      {{currentMood()}}
+    </ion-card-content>
+  </ion-card>
+ 
+</ion-content>

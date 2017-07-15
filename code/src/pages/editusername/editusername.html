@@ -1,0 +1,21 @@
+
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Enter Your name</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="overflow:hidden">
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]='name' name='name' required placeholder="Enter your Name"></ion-input>
+    </ion-item>
+  </ion-list>  
+  <div class="valids">
+    <button ion-button outline class="ok" (click)='updateName()'>OK</button>
+    <button ion-button outline class="cancel" navPop>Cancel</button>
+  </div>
+</ion-content>

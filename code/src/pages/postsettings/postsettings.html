@@ -1,0 +1,34 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Post Settings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+  <ion-list radio-group>
+    <ion-item>
+      <ion-label>Post Now</ion-label>
+      <ion-radio value="postnow"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Post Privately</ion-label>
+      <ion-radio value="postprivately"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Set a Post </ion-label>
+      <ion-radio value="post" (click)="togglepost()"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <ion-item [hidden]="!post">
+    <ion-datetime displayFormat="MMM/DD/YYYY" placeholder="Date" style="width:49%;" style="border-bottom: none"></ion-datetime>
+  </ion-item>  
+  <ion-item [hidden]="!post" style="border-bottom: none">  
+    <ion-datetime displayFormat="hh:mm:A"  placeholder="Time" style="width:49%;"></ion-datetime>
+  </ion-item>
+
+</ion-content>

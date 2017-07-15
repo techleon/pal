@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>QR Code</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <p>Ask your friends to scan this QR image in their PaL app to add them as friends</p>
+  <img class='qr-image-page-center' *ngIf='qr_base64_data_uri' [src]='qr_base64_data_uri | safeUrl' />
+</ion-content>

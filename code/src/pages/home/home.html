@@ -1,0 +1,50 @@
+<ion-menu [content]="menu_button">
+  <ion-header>
+    <ion-toolbar color="danger">
+      <ion-title>Menu</ion-title>
+      <button ion-button icon-only #menu_button  right menuToggle>
+      <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="content">
+    <ion-list id="list" no-lines>
+      <button ion-item (click)="openPage(profilePage)" class="profile">
+       <ion-icon name="bowtie" class="profile-icon"></ion-icon>
+       <h2>Profile</h2>
+      </button>
+      <button ion-item (click)="openPage(reminderPage)" class="reminders">
+       <ion-icon name="alarm" class="rem-icon"></ion-icon>
+        <h2>Reminders</h2>
+      </button>
+      <button ion-item (click)="openPage(crewPage)" class="crews">
+        <ion-icon name="people" class="crews-icon"></ion-icon>
+        <h2>Crews</h2>
+      </button>
+      <button ion-item (click)="openPage(privacyPage)" class="privacy">
+        <ion-icon name="lock" class="privacy-icon"></ion-icon>
+        <h2>Privacy</h2>
+      </button>
+      <button ion-item class="logout" (click)='logout()'>
+        <ion-icon name="log-out" class="logout-icon"></ion-icon>
+        <h2>Log Out</h2>
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-header>
+  <ion-toolbar color="danger">
+    <button ion-button icon-only #menu_button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-toolbar>
+</ion-header>
+<ion-tabs class="tabs">
+  <ion-tab  [root]="tab1Root" tabTitle="Wall" tabIcon="paper"></ion-tab>
+  <ion-tab  [root]="tab2Root" tabTitle="Hang-Outs" tabIcon="cafe"></ion-tab>
+  <ion-tab  [root]="tab3Root" tabTitle="Post" tabIcon="flame"></ion-tab>
+</ion-tabs>  
+
+
+
+

@@ -1,0 +1,29 @@
+<ion-content class="signup">
+
+<img src="assets/pal.png" class="logo"/>
+<form novalidate  #palsignup="ngForm" (ngSubmit)="submitEvent(palsignup.form.valid)">
+  <button ion-button color="light" class="getstarted" type="submit" clear>GET STARTED</button>
+  <div class="items">
+    <ion-item class="items-form" no-padding padding-bottom>
+      <ion-label class="label">Name:</ion-label>
+      <ion-input class="input" type="text" #usernameref="ngModel" name="username" [(ngModel)]='newUser.name' required minlength="4"></ion-input>         
+    </ion-item>
+    <ion-item class="items-form"no-padding padding-bottom>
+      <ion-label  class="label">Email:</ion-label>
+      <ion-input  class="input" type="email" #emailref="ngModel" name="email" [(ngModel)]='newUser.email'></ion-input>
+    </ion-item>
+    <ion-item class="items-form" no-padding padding-bottom> 
+      <ion-label  class="label">Password:</ion-label>
+      <ion-input  class="input" type="password" #passwordref="ngModel" name="password" [(ngModel)]='newUser.password' required minlength="6"></ion-input>
+    </ion-item>
+  </div> 
+</form>
+ <!--
+  <div text-center class='label'>Or
+  </div>
+  
+  <div class="social">
+    <button padding-left='0px' padding-right='0px' ion-button class="google"><img src="../assets/google2.svg" class="google-icon">&nbsp;&nbsp;Sign in with Google</button>
+  </div>
+  -->
+</ion-content>

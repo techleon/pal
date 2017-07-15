@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Create Hangout</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content class="hangout-content">
+  <div class="valids">
+    <button ion-button icon-left color="dark" clear class="done"><ion-icon name="checkmark"></ion-icon>Done</button>
+    <button ion-button icon-left color="dark" clear class="cancel" navPop><ion-icon name="close"></ion-icon>Cancel</button>
+  </div>
+<ion-list>
+<ion-item class="inputs">
+    <ion-label class="label">Hangout Name</ion-label>
+    <ion-input type="text" [(ngModel)]='name' required name='name'></ion-input>
+</ion-item>
+<ion-item class="inputs">
+    <ion-label class="label">When?</ion-label>
+    <ion-datetime displayFormat="MMM/DDD, DD/YYYY" required [(ngModel)]="fromDate"></ion-datetime>
+</ion-item>
+<ion-item class="inputs">
+    <ion-label class="label">When Exactly?</ion-label>
+    <ion-datetime displayFormat="hh:mm A" required [(ngModel)]="fromtime"></ion-datetime>
+</ion-item>
+<ion-card>
+  <ion-card-header>
+    Location
+  </ion-card-header>
+  <ion-card-content>
+     <div #map id="map" style="min-height:300px;"></div>
+  </ion-card-content>
+</ion-card><br />
+<ion-label class="hangoutpals">Who?</ion-label>
+</ion-list>
+<ion-searchbar
+  [(ngModel)]="myInput"
+  [showCancelButton]="true"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+</ion-searchbar>
+<ion-list>
+  <ion-item>
+    <ion-avatar item-start>
+        <img src="assets/bricks.jpg" />
+    </ion-avatar>
+    <h2>Ajay</h2>
+  </ion-item>
+</ion-list>
+</ion-content>

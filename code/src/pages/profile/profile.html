@@ -1,0 +1,56 @@
+<ion-header *ngIf='user.api_key'>
+  <ion-navbar color="danger">
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="profile">
+  <div class="profile-content" id='profile-content'>
+   <div class="valids" *ngIf='user.api_key'>
+    <button ion-button icon-left [disabled]='!profileEditDataStore()' [style.opacity]='profileEditDataStore() ? "1" : "0" ' color="dark" clear class="done"><ion-icon name="checkmark"></ion-icon>Done</button>
+    <button ion-button icon-left [disabled]='!profileEditDataStore()' [style.opacity]='profileEditDataStore() ? "1" : "0" ' (click)="disableedit()" color="dark" clear class="cancel"><ion-icon name="close"></ion-icon>Cancel</button>
+  </div>
+  </div>
+  <div class="profiledetails">
+  <div class="avatar" id='avatar'>
+  </div>
+  
+  <button [disabled]='!profileEditDataStore()'  *ngIf='user.api_key' [style.opacity]='profileEditDataStore() ? "1" : "0" ' ion-fab mini  (click)="selectImage()" class="profimage-edit"><ion-icon name="camera" color="dark3"></ion-icon></button>
+  <button [disabled]='!profileEditDataStore()'  *ngIf='user.api_key' [style.opacity]='profileEditDataStore() ? "1" : "0" ' ion-fab mini  (click)="selectCoverImage()" class="coverimage-edit" clear><ion-icon name="camera" color="dark3"></ion-icon></button>
+  <span disabled='profileEditDataStore()'  *ngIf='user.api_key' [style.opacity]='profileEditDataStore() ? "0" : "1" '>
+  <ion-icon name="more" (click)="profilemenuPopover($event)" class="menuoptions"></ion-icon>
+  </span>
+ <div class="username" text-center>
+    <span class="user-name">{{name()}}</span>
+    <button ion-button clear [disabled]='!profileEditDataStore()' class="profileediticon" [style.opacity]='profileEditDataStore() ? "1" : "0" ' (click)="nav(editusername)" type='button'><ion-icon name="create"  ></ion-icon></button>
+ </div><br />
+ <p>{{user.mood}}</p> 
+ <div class="profactions"  *ngIf='!user.api_key'>
+  <button ion-button  clear icon-left class="rate" (click)="ratingPopover($event)" ><ion-icon name="star" ></ion-icon>Rate DP</button>
+  
+  <button ion-button  clear icon-left class="rank" (click)="rankingPopover($event)" ><ion-icon name="paw" ></ion-icon>Rank</button>
+  
+  <button ion-button  clear icon-left class="anotext"><ion-icon name="chatboxes"></ion-icon>AnoText</button>
+ </div> 
+ </div>
+ <div [ngSwitch]="profilesegments">
+    <ion-list *ngSwitchCase="'posts'">
+      <ion-item>
+        <h2>posts</h2>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'followers'">
+      <ion-item>
+        <h2>followers</h2>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngSwitchCase="'following'">
+      <ion-item>
+        <h2>following</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+   <ion-fab bottom right  *ngIf='user.api_key'>
+    <button ion-fab mini (click)="nav(postit)"><ion-icon name="create"></ion-icon></button>
+  </ion-fab>
+</ion-content>

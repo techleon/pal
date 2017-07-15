@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Find an Event</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar
+  [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)">
+  </ion-searchbar>
+</ion-content>

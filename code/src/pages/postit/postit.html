@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>Whisper Something
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="content">
+
+  <div style='height: 100%;'>
+    <button ion-button class="audio" (click)="nav(psound)"><h1 style="float:right;">Audio</h1></button>
+    <button ion-button class="video" (click)="nav(pvideo)"><h1 style="float:right;">Video</h1></button>
+    <button ion-button class="link"  (click)="nav(plink)"><h1 style="float:right;">Link</h1></button>
+    <button ion-button class="quote" (click)="nav(ptext)"><h1 style="float:right;">Quote</h1></button>
+    <button ion-button class="pic"   (click)="nav(ppic)"><h1 style="float:right;">Pic</h1></button>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,16 @@
+<ion-content class="content">
+  
+  <img src="assets/pal.png" class="logo"/>
+  <form novalidate #pallogin="ngForm" class="loginform" >
+    <button ion-button color="light" class='signin' type="button" clear (click)="login(pallogin.form.valid)">Login</button>
+    <ion-item class="item1">
+      <ion-label inset class="label">Email:</ion-label>
+      <ion-input name='email' class='input' [(ngModel)]='loginUserInfo.email' type="text"></ion-input>
+    </ion-item>
+    <ion-item class="item2">
+      <ion-label inset  class="label">Password:</ion-label>
+      <ion-input name='password' class='input' [(ngModel)]='loginUserInfo.password' type="password"></ion-input>
+    </ion-item>
+    <button ion-button class='forgotpass' type="button" clear>FORGOT YOUR PASSWORD?</button>
+  </form>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-list radio-group class="rating">
+<ion-item>
+    <ion-label>
+        <span [ngClass]='{"star-button":(rating >= 0), "gold-star": (rating == 1)}'>
+          <i class='fa fa-star'></i>
+        </span>  
+    </ion-label>
+    <ion-radio value="onestar" (click)='starClicked(1)'>
+    </ion-radio>
+</ion-item>
+<ion-item>
+    <ion-label>
+        <span [ngClass]='{"star-button":(rating >= 0), "gold-star": (rating == 2)}'>
+          <i class='fa fa-star'></i><i class='fa fa-star'></i>
+        </span>  
+    </ion-label>
+    <ion-radio value="twostar" (click)='starClicked(2)'>
+    </ion-radio>
+</ion-item>
+<ion-item>
+    <ion-label>
+        <span [ngClass]='{"star-button": (rating >= 0), "gold-star": (rating == 3)}'>
+          <i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>
+        </span>  
+    </ion-label>
+    <ion-radio value="threestar" (click)='starClicked(3)'>
+    </ion-radio>
+</ion-item>        
+<ion-item>
+    <ion-label>
+        <span [ngClass]='{"star-button": (rating >= 0), "gold-star": (rating == 4)}'>
+          <i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>
+        </span>  
+    </ion-label>
+    <ion-radio value="fourstar" (click)='starClicked(4)'>
+    </ion-radio>
+</ion-item>  
+<ion-item>
+    <ion-label>
+        <span [ngClass]='{"star-button": (rating >= 0), "gold-star": (rating == 5)}'>
+          <i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i><i class='fa fa-star'></i>
+        </span>  
+    </ion-label>
+    <ion-radio value="fivestar" (click)='starClicked(5)'>
+    </ion-radio>
+</ion-item>  
+</ion-list>`
+
+    <!--
+    <button (click)='starClicked(2)' [ngClass]='{"star-button": (rating < 2), "gold-star": (rating > 1)}' ion-button clear><i class='fa fa-star'></i></button>
+    <button (click)='starClicked(3)' [ngClass]='{"star-button": (rating < 3), "gold-star": (rating > 2)}' ion-button clear><i class='fa fa-star'></i></button>
+    <button (click)='starClicked(4)' [ngClass]='{"star-button": (rating < 4), "gold-star": (rating > 3)}' ion-button clear><i class='fa fa-star'></i></button>
+    <button (click)='starClicked(5)' [ngClass]='{"star-button": (rating < 5), "gold-star": (rating > 4)}' ion-button clear><i class='fa fa-star'></i></button>
+    -->

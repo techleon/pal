@@ -1,0 +1,14 @@
+<ion-content>
+  <p text-center text-capitalize class="default-msg" *ngIf='crews.length < 1' >You haven't created any Crews yet,Tap on the <ion-icon name="add-circle"></ion-icon> icon ! To Create one</p>
+  <ion-list *ngIf='crews.length > 0' >
+	  <ion-item *ngFor='let crew of crews' (click)='openCrew(crew)'>
+	    <ion-avatar item-start>
+	      <img [src]="trustUrl(crew.cover_base64_data_uri  || 'assets/crewdefault.jpg')">
+	    </ion-avatar>
+	    <h2>{{crew.name}}</h2>
+	  </ion-item>
+	</ion-list>
+  <ion-fab bottom right>
+    <button ion-fab mini color="dark3" (click)="showPrompt()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

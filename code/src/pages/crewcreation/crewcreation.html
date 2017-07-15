@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-title></ion-title>
+</ion-header>
+
+<ion-content class="content">
+  <div class="profile-content" id='profile-content' (click)='selectCoverImage()'>
+  </div>
+  <ion-fab top left>
+    <button ion-fab mini style="background-color:transparent;box-shadow:0;color:black;" navPop><ion-icon name="arrow-round-back"></ion-icon></button>
+  </ion-fab> 
+  <h2 class="crewname">{{crew.name}}</h2>
+  <ion-fab top right>
+    <button ion-fab mini><ion-icon name="arrow-dropdown" style="background-color:transparent;"></ion-icon></button>
+    <ion-fab-list>
+      <button ion-fab (click)='addMember()'><ion-icon name="person-add"></ion-icon></button>
+      <button ion-fab (click)='openCrewMembers()'><ion-icon name="people"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

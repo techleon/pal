@@ -1,0 +1,96 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/v2/theming/
+$font-path: "../assets/fonts";
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+@import "scss/font-awesome"; @font-face { font-family: 'FontAwesome'; src: url('../assets/fonts/fontawesome-webfont.eot?v=#{$fa-version}');
+src: url('../assets/fonts/fontawesome-webfont.eot?#iefix&v=#{$fa-version}') format('embedded-opentype'),
+url('../assets/fonts/fontawesome-webfont.woff2?v=#{$fa-version}') format('woff2'),
+url('../assets/fonts/fontawesome-webfont.woff?v=#{$fa-version}') format('woff'),
+url('../assets/fonts/fontawesome-webfont.ttf?v=#{$fa-version}') format('truetype'),
+url('../assets/fonts/fontawesome-webfont.svg?v=#{$fa-version}#fontawesomeregular') format('svg'); font-weight: normal; font-style: normal; }
+$colors: (
+  primary:    #32db64,
+  secondary:  green,
+  danger:     #c64d4d,
+  light:      #ede6e6,
+  dark:       black,
+  dark1:      #404040,
+  maroony:    #510f24,
+  dark2:      #202020,
+  dark3:     	#2D2D39,
+  voolet:     #8074ad,
+  orangey:    #e5ad5e
+);
+//styling for tabs
+ $tabs-background:#202020;
+ $tabs-border-color:black;
+ $tabs-md-tab-icon-color:#E79A2F;
+ $tabs-md-tab-text-color:#E79A2F;
+ $segment-button-md-border-color-activated:#202020;
+ $segment-button-md-text-color-activated:#202020;
+ 
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/v2/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+
+
+.introslides .swiper-pagination{position:fixed !important; left: 50% !important; transform: translateX(-50%) !important;top: 35% !important ;} 
